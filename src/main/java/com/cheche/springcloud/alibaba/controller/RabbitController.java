@@ -115,6 +115,8 @@ public class RabbitController {
         map.put("messageData", messageData);
         map.put("createTime", createTime);
         rabbitTemplate.convertAndSend("lonelyDirectExchange", "TestDirectRouting", map);
+        //修改git的提交代码
+
         return "ok";
     }
 
