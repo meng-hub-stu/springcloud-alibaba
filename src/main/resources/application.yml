@@ -1,0 +1,52 @@
+#端口配置
+server:
+  port: 9527
+#配置日志输出级别
+logging:
+  level:
+    org.springframework.web: debug
+spring:
+  application:
+    name: springcloud-alibaba
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/grant_stu?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+    username: root
+    password: root
+#配置redis
+  redis:
+    ##redis ??????
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    ssl: false
+    ##redis ??????
+    #cluster:
+    #  nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+    #  commandTimeout: 5000
+    lettuce:
+      pool:
+        max-idle: 10
+        max-wait: 500
+        max-active: 8
+        min-idle: 0
+#配置rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #虚拟host 可以不设置,使用server默认host
+#    virtual-host: JCcccHost
+    #消息确认配置项
+
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
+
+
+
+
+
