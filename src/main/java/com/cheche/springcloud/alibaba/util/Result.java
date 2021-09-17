@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = -3227876720404375612L;
     private static final Integer SUCCESS_CODE = 200;
